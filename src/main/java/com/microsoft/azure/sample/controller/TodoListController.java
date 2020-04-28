@@ -39,7 +39,7 @@ public class TodoListController {
             method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
     public ResponseEntity<?> getTodoItem(@PathVariable("index") String index) {
         try {
-            return new ResponseEntity<TodoItem>(todoItemRepository.findById(index).get(), HttpStatus.OK);
+            return new ResponseEntity<>(todoItemRepository.findById(index), HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<String>(index + " not found", HttpStatus.NOT_FOUND);
         }

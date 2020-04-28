@@ -6,9 +6,9 @@
 package com.microsoft.azure.sample.dao;
 
 import com.microsoft.azure.sample.model.TodoItem;
-import com.microsoft.azure.spring.data.cosmosdb.repository.DocumentDbRepository;
+import com.microsoft.azure.spring.data.cosmosdb.repository.ReactiveCosmosRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface TodoItemRepository extends DocumentDbRepository<TodoItem, String> {
+public interface TodoItemRepository extends ReactiveCosmosRepository<TodoItem, String> {
 }
